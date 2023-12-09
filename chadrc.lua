@@ -8,6 +8,11 @@ M.ui = {
   theme = "kanagawa",
   theme_toggle = { "kanagawa", "one_light" },
 
+  statusline = {
+    theme = "minimal",
+    separator_style = "round",
+  },
+
   hl_override = highlights.override,
   hl_add = highlights.add,
 }
