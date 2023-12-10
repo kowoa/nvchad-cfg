@@ -13,3 +13,5 @@ autocmd({ "BufNewFile", "BufRead" }, {
   pattern = { "*.wgsl" },
   command = "set filetype=wgsl",
 })
+
+vim.opt.guifont = "MonaspiceAr NFM:h11"
