@@ -47,6 +47,28 @@ local plugins = {
     end,
   },
 
+  {
+    "mrcjkb/rustaceanvim",
+    version = "^3",
+    ft = { "rust" },
+    config = function()
+      vim.g.rustaceanvim = {
+        server = {
+          on_attach = function(_, bufnr)
+            vim.keymap.set(
+              "n",
+              "<leader>a",
+              function()
+                vim.cmd.RustLsp('codeAction')
+              end,
+              { silent = true, buffer = bufnr }
+            )
+          end,
+        },
+      }
+    end,
+  },
+
   -- To make a plugin not be loaded
   -- {
   --   "NvChad/nvim-colorizer.lua",
